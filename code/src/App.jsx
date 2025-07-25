@@ -52,7 +52,6 @@ function App() {
         setLoading(false);
       }
     };
-
     fetchPokemon();
   }, []);
 
@@ -70,7 +69,6 @@ function App() {
     }
   };
 
-  
   const getStatColor = (statName) => {
     switch(statName) {
       case 'hp': return '#ff6b6b';
@@ -102,7 +100,6 @@ function App() {
           )}
         </div>
       </header>
-
       <main className="main-content">
         {loading ? (
           <div className="loading">
@@ -160,14 +157,12 @@ function App() {
           </div>
         )}
       </main>
-
       {selectedPokemon && (
         <div className="pokemon-modal" onClick={() => setSelectedPokemon(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="close-modal" onClick={() => setSelectedPokemon(null)}>
               <FaTimes />
             </button>
-            
             <div className="modal-header">
               <img 
                 src={selectedPokemon.image} 
@@ -190,7 +185,6 @@ function App() {
                 </div>
               </div>
             </div>
-            
             <div className="modal-stats">
               <div className="stat-item">
                 <h4><FaRulerVertical className="stat-icon" /> Taille</h4>
@@ -201,15 +195,12 @@ function App() {
                 <p>{selectedPokemon.weight} kg</p>
               </div>
             </div>
-            
             <div className="modal-section">
               <h4>Statistiques</h4>
               <div className="stats-container">
                 {selectedPokemon.stats.map(stat => {
-                
                   let statIcon;
                   let statLabel;
-                  
                   switch(stat.stat.name) {
                     case 'hp':
                       statIcon = <FaHeart className="stat-icon" />;
@@ -239,7 +230,6 @@ function App() {
                       statIcon = <FaChartLine className="stat-icon" />;
                       statLabel = stat.stat.name;
                   }
-
                   return (
                     <div key={stat.stat.name} className="stat-bar">
                       <span className="stat-name">
@@ -264,7 +254,6 @@ function App() {
           </div>
         </div>
       )}
-
       <footer className="app-footer">
         <p>Pokémon - Génération 1 (20 Pokémon)</p>
         <p><FaInfoCircle /> Cliquez sur un Pokémon pour voir ses détails</p>
