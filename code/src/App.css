@@ -498,3 +498,36 @@ body {
   min-width: 100px;
   text-transform: capitalize;
 }
+/* Styles pour les images de type */
+.type-image {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* Ajustement des badges de type */
+.type-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  margin: 2px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: white;
+  text-transform: capitalize;
+}
+
+/* Ajustement de l'image du Pokémon dans la carte */
+.pokemon-image {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+/* Ajustement de l'image dans la modale */
+.modal-pokemon-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
